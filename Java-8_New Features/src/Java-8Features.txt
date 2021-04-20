@@ -1,0 +1,128 @@
+Java 8 Programming Language Enhancements
+==================================================
+Java 8 provides following features for Java Programming:
+---------------------------------------------------------
+1)Lambda expressions,
+2)Method references,
+3)Functional interfaces
+4)Default methods,
+5)Stream API,
+6)ForEach() method,
+7)Static methods in interface,
+8)Optional class,
+9)Collectors class,
+10)Parallel array sorting,
+11)Nashorn JavaScript Engine,
+12)Parallel Array Sorting,
+13)Type and Repating Annotations,
+14)IO Enhancements,
+15)Concurrency Enhancements,
+16)JDBC Enhancements etc.
+============================================
+
+
+Java 8 Features
+Oracle released a new version of Java as Java 8 in March 18, 2014. 
+It was a revolutionary release of the Java for software development
+ platform. It includes various upgrades to the Java programming, JVM,
+  Tools and libraries.
+
+Lambda Expressions:
+Lambda expression helps us to write our code in functional style.
+ It provides a clear and concise way to implement SAM interface
+ (Single Abstract Method) by using an expression. 
+ It is very useful in collection library in which it helps to iterate,
+  filter and extract data.
+
+
+Method References:
+Java 8 Method reference is used to refer method of functional interface .
+ It is compact and easy form of lambda expression. 
+ Each time when you are using lambda expression to just 
+ referring a method, you can replace your lambda expression with method reference.
+
+Functional Interface:
+An Interface that contains only one abstract method is known as functional interface. 
+It can have any number of default and static methods. It can also declare methods of object class.
+Functional interfaces are also known as Single Abstract Method Interfaces (SAM Interfaces).
+
+Optional:
+Java introduced a new class Optional in Java 8. 
+It is a public final class which is used to deal with
+ NullPointerException in Java application. We must 
+ import java.util package to use this class. It provides methods to check
+  the presence of value for particular variable.
+
+forEach:
+Java provides a new method forEach() to iterate the elements. 
+It is defined in Iterable and Stream interfaces.
+It is a default method defined in the Iterable interface.
+Collection classes which extends Iterable interface can use forEach() method to iterate elements.
+This method takes a single parameter which is a functional interface. 
+So, you can pass lambda expression as an argument.
+
+Date/Time API
+Java has introduced a new Date and Time API since Java 8. 
+The java.time package contains Java 8 Date and Time classes.
+
+Default Methods:
+Java provides a facility to create default methods inside the interface.
+ Methods which are defined inside the interface and tagged with default 
+ keyword are known as default methods. These methods are non-abstract
+ methods and can have method body.
+
+Nashorn JavaScript Engine:
+Nashorn is a JavaScript engine. It is used to execute JavaScript code
+dynamically at JVM (Java Virtual Machine). Java provides a command-line 
+tool jjs which is used to execute JavaScript code.
+
+You can execute JavaScript code by two ways:
+
+Using jjs command-line tool, and
+By embedding into Java source code.
+
+StringJoiner:
+Java added a new final class StringJoiner in java.util package.
+ It is used to construct a sequence of characters separated by a delimiter.
+ Now, you can create string by passing delimiters like comma(,), hyphen(-) etc.
+
+For more information and examples: click here
+
+Collectors:
+Collectors is a final class that extends Object class. 
+It provides reduction operations, such as accumulating elements
+ into collections, summarizing elements according to various criteria etc.
+
+Stream API:
+Java 8 java.util.stream package consists of classes, interfaces 
+and an enum to allow functional-style operations on the elements. 
+It performs lazy computation. So, it executes only when it requires.
+
+
+Stream Filter:
+Java stream provides a method filter() to filter stream elements on 
+the basis of given predicate. Suppose, you want to get only even elements 
+of your list, you can do this easily with the help of filter() method.
+This method takes predicate as an argument and returns a stream of resulted elements.
+
+
+
+Java Base64 Encoding and Decoding:
+Java provides a class Base64 to deal with encryption and decryption.
+ You need to import java.util.Base64 class in your source file to use its methods.
+This class provides three different encoders and decoders to encrypt information at each level.
+
+Java Parallel Array Sorting:
+Java provides a new additional feature in Arrays class which is used
+ to sort array elements parallelly. The parallelSort() method has added 
+ to java.util.Arrays class that uses the JSR 166 Fork/Join parallelism 
+ common pool to provide sorting of arrays. It is an overloaded method.
+
+
+Java 8 Security Enhancements:
+1) The Java Secure Socket Extension(JSSE) provider enables the protocols
+ Transport Layer Security (TLS) 1.1 and TLS 1.2 by default on the client side.
+
+2) A improved method AccessController.doPrivileged has been added which enables 
+code to assert a subset of its privileges, without preventing the full traversal 
+of the stack to check for other permissions.
