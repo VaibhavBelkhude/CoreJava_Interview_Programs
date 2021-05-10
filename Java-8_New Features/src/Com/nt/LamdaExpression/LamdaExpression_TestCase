@@ -1,0 +1,75 @@
+*FuctionalInterface required for Lamda Expression
+interface I1
+{
+	void m1(int a);
+}
+
+class  
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+	}
+}
+
+How To convert Method into Lamda Expression
+Test1:
+public void m1(int a,int b){
+System.out.println(a+b);	
+}
+-------------------------------
+LE:
+----
+(int a,int b)->System.out.println(a+b);	
+-----------------------------------------
+( a, b)->System.out.println(a+b);	
+----------------------------------
+Example:3
+public int SqureIT(int p){
+	return p*p;
+}
+---------------------------------
+LE:
+(int p)->{return p*p;}
+------------------------------------------------------
+ (p)->return p*p; ====> invalid
+ (p)->{return p*p;};===>valid
+ (p)->{return p*p};====>inavlid (; is missing)
+ (p)->{ p*p;}; ===>invalid {}without return statement
+ (p)->p*p; =====>valid
+------------------------------------------------------
+ p-> p*p;
+ --------------------------
+Example:4
+=======================
+public void m1(String s){
+	return s.length();
+}
+----------------------------
+LE:
+ s->s.length();
+================================
+
+FI==> @FunctionalInterface
+----------------------------
+Runnable: only One Method -->run()
+
+Comparable :only One Method -->compareTO()
+Comparator : only One Method -->compare()
+ActionListener : only One Method -->actionPerformed()
+Callable : only One Method -->Call()
+Example:5
+--------------
+
+public void m1(int a,int b){
+System.out.println(a+b);	
+}
+
+---------------------
+LE:
+(a, b)->System.out.println(a+b);
+----------------------------------------
+1)without carly Bracket we can not  use return keyword. Compile considered return value Automatically.
+2)within carly Bracket if we want return some value compolsory we should  use return statement.
+{
+}
