@@ -1,0 +1,7 @@
+lhs.add("Vaibhav");
+		lhs.add("a");
+		lhs.add("a");
+		lhs.add("b" );
+		lhs.add(98);
+		lhs.add(new String("a"));
+		lhs.add('a');
