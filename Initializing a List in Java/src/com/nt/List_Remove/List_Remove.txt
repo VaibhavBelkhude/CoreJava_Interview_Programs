@@ -1,0 +1,60 @@
+List remove(int index) method in Java with Examples:
+=====================================================
+The remove(int index) method of List interface in Java is
+used to remove an element from the specified index from a 
+List container and returns the element after removing it.
+It also shifts the elements after the removed element by
+1 position to the left in the List.
+--------------------------------------------------------
+Syntax:
+
+E remove(int index)
+
+Where, E is the type of element maintained
+by this List collection
+Parameters: It accepts a single parameter index of integer type which
+represents the index of the element needed to be removed from the List.
+---------------------------------------------------------------------------------
+Return Value: It returns the element present at the given index after removing it.
+---------------------------------------------------------------------------------
+Below program illustrate the remove(int index) method of List in Java:
+---------------------------------------------------------------------------------
+what is the differance between clear() and removeAll()?
+clear():-
+1)it is an void method.
+2)Let gc do its work
+3)clear() is much faster since it doesn't have to deal with
+  all those extra method calls.
+----------------------------------
+4)The source code for clear():
+
+public void clear() {
+    modCount++;
+
+    // Let gc do its work
+    for (int i = 0; i < size; i++)
+        elementData[i] = null;
+
+    size = 0;
+}
+
+=======================================================================
+The source code for removeAll()(As defined in AbstractCollection):
+==============================================
+1)It is an boolean return type.
+2)it is defined in Abstract Collection
+3)c.contains(..) increases the time complexity of removeAll method to 
+  O(n2) as opposed to clear's O(n).
+  ---------------------------------------------------------------------
+public boolean removeAll(Collection<?> c) {
+    boolean modified = false;
+    Iterator<?> e = iterator();
+    while (e.hasNext()) {
+        if (c.contains(e.next())) {
+            e.remove();
+            modified = true;
+        }
+    }
+    return modified;
+}
+----------------------------------------

@@ -1,0 +1,9 @@
+2)Creating Immutable List:
+  Using Arrays.asList()
+Arrays.asList() creates an immutable list from an array.
+ Hence it can be used to instantiate a list with an array.
+ 
+ 3)Creating Mutable List:ArrayList<>(Arrays.asList(1, 2, 3)
+Syntax:
+
+List<Integer> list=new ArrayList<>(Arrays.asList(1, 2, 3));
