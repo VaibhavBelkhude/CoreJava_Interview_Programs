@@ -1,0 +1,10 @@
+
+
+
+               HashMap                                                  TreeMap
+   1)HashMap contains value based on the key.          1)TreeMap also contains value based on the key.
+   2)It may have a single null key and multiple        2)It cannot have a null key but have multiple null values.
+     null values.                                     
+  3)HashMap does not maintain order while iterating.   3)
+  4)It contains unique elements.                       4)It contains unique elements.
+  5)It works on the principle of hashing.              5)It stores the object in the tree structure.

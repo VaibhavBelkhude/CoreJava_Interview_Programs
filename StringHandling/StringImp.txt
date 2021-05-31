@@ -1,0 +1,62 @@
+
+“==” operator compares the two objects on their physical address. That means if two 
+references are pointing to same object in the memory, then comparing those two 
+references using “==” operator will return true. For example, if s1 and s2 are two 
+references pointing to same object in the memory, then invoking s1 == s2 will 
+return true. This type of comparison is called “Shallow Comparison”.
+
+equals() method, if not overrided, will perform same comparison as “==” operator does
+ i.e comparing the objects on their physical address. So, it is always recommended that
+  you should override equals() method in your class so that it provides field by field
+   comparison of two objects. This type of comparison is called “Deep Comparison”.
+
+In java.lang.String class, equals() method is overrided to provide the comparison of 
+two string objects based on their contents. That means, any two string objects having
+ same content will be equal according to equals() method. For example, 
+ if s1 and s2 are two string objects having the same content, 
+ then invoking s1.equals(s2) will return true.
+
+hashCode() method returns hash code value of an object in the Integer form. 
+It is recommended that whenever you override equals() method, you should also 
+override hashCode() method so that two equal objects according to equals() method 
+must return same hash code values. This is the general contract between equals() and
+ hashCode() methods that must be maintained all the time.
+
+In java.lang.String class, hashCode() method is also overrided so that two equal string
+ objects according to equals() method will return same hash code values. That means, 
+ if s1 and s2 are two equal string objects according to equals() method, then invoking 
+ s1.hashCode() == s2.hashCode() will return true.
+ -----------------------------------------------------------------------------------------
+s1 == s2 —> will return true as both are pointing to same object in the constant pool.
+s1.equals(s2) —> will also return true as both are referring to same object.
+s1="abc";
+s2="abc";
+s1.hashCode() == s2.hashCode() —> It also returns true.
+--------------------------------------------------------------------
+6) Where exactly string constant pool is located in the memory?
+Inside the heap memory. JVM reserves some part of the heap memory to store
+ string objects created using string literals. 
+--------------------------------------------------------------------------------
+18) What is string intern?
+String object in the string constant pool is called as String Intern. 
+You can create an exact copy of heap memory string object in string constant pool. 
+This process of creating an exact copy of heap memory string object in the string constant
+pool is called interning. intern() method is used for interning.  
+==========================================================================================
+17)How many objects will be created in the following code and where they will be stored?
+
+String s1 = new String("abc");
+ 
+String s2 = new String("abc");
+
+Two objects will be created and they will be stored in the heap memory.
+===========================================================================================
+21) Can we call String class methods using string literals?
+Yes, we can call String class methods using string literals. Here are some examples,
+
+"abc".charAt(0)
+ 
+"abc".compareTo("abc")
+ 
+"abc".indexOf('c')
+============================================================================================

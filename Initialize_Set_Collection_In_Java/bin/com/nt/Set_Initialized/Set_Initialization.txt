@@ -1,0 +1,16 @@
+Initializing HashSet in Java:
+Set in Java is an interface which extends Collection. 
+It is an unordered collection of objects in which duplicate 
+values cannot be stored.
+------------------------------------------------------------------------------
+Basically, set is implemented by HashSet, LinkedHashSet 
+or TreeSet (sorted representation).
+Set has various methods to add, remove clear, size, 
+etc to enhance the usage of this interface.
+-------------------------------------------------------------------------------
+Method 1: Using Constructor:
+In this method first we create an array then convert it to a 
+list and then pass it to the HashSet constructor that accepts another collection.
+Integer elements of the set are printed in sorted order.
+----------------------------------------------------------------------------------
+// Java code for initializing a Set
