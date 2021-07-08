@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bean id="viewResolver" 
+class="org.springframework.web.servlet.view.tiles3.TilesViewResolver"/>  
+<bean id="tilesConfigurer" 
+class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">  
+<property name="definitions">  

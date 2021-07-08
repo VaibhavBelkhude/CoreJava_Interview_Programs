@@ -1,0 +1,20 @@
+Points to Note
+It is an optional part of a SOAP message.
+
+Header elements can occur multiple times.
+
+Headers are intended to add new features and functionality.
+
+The SOAP header contains header entries defined in a namespace.
+
+The header is encoded as the first immediate child element of the SOAP envelope.
+
+When multiple headers are defined, all immediate child elements of the SOAP header are interpreted as SOAP header blocks.
+
+SOAP Header Attributes
+===================================================================
+ You can manually specified the timeout value in “second” for a particular 
+ session. 
+ Ex:
+ HttpSession session = request. getSession();
+  session. setMaxInactiveInterval(20*60);

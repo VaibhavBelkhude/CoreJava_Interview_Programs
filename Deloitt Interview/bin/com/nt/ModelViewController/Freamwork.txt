@@ -1,0 +1,74 @@
+1)if we wnat actionform to work correctly
+choose option:
+A)it should have a public getter/setter method for all properties
+B)It must have no-argument Constructor
+
+ans:no of these
+2)DispatchAction provides a mechanism for grouping a set of related functions into a single action, 
+
+========================================================
+Add validate Method
+To enable the Struts 2 Action class to validate a user’s input on a Struts 2 form, you must define a validate method in your Action class. Using the example from Processing Forms tutorial, let’s say that we have these business rules:
+
+User must provide a first name
+User must provide an email address
+User younger than 18 cannot register
+If you recall from the Processing Forms tutorial the user’s input into the form fields is placed by Struts 2 into the Java model class personBean. So a user’s input into the firstName field would end up as the value for personBean’s firstName instance field (via the personBean.setFirstName method).
+
+In the validate method we can refer to get the values of personBean’s instance fields by using the appropriate get methods. Once we have the values we can employ logic to enforce our business rules.
+
+Add the following validate method to Register.java (the Action class).
+
+validate method
+
+public void validate(){
+    if (personBean.getFirstName().length() == 0) {
+        addFieldError("personBean.firstName", "First name is required.");
+    }
+
+    if (personBean.getEmail().length() == 0) {
+        addFieldError("personBean.email", "Email is required.");
+    }
+
+    if (personBean.getAge() < 18) {
+        addFieldError("personBean.age", "Age is required and must be 18 or older");
+    }
+}
+================================================================================
+web Services
+============
+Every SOAP message has a root Envelope element.
+
+Envelope is a mandatory part of SOAP message.
+
+Every Envelope element must contain exactly one Body element.
+
+If an Envelope contains a Header element, it must contain no more than one, and it must appear as the first child of the Envelope, before the Body.
+
+The envelope changes when SOAP versions change.
+
+The SOAP envelope is specified using the ENV namespace prefix and the Envelope element.
+
+The optional SOAP encoding is also specified using a namespace name and the optional encodingStyle element, which could also point to an encoding style other than the SOAP one.
+
+A v1.1-compliant SOAP processor generates a fault upon receiving a message containing the v1.2 envelope namespace.
+
+A v1.2-compliant SOAP processor generates a VersionMismatch fault if it receives a message that does not include the v1.2 envelope namespace.
+=====================================================
+Advantages of Statelessness
+Following are the benefits of statelessness in RESTful Web Services −
+
+Web services can treat each method request independently.
+
+Web services need not maintain the client's previous interactions.
+ It simplifies the application design.
+
+As HTTP is itself a statelessness protocol, RESTful Web Services work 
+seamlessly with the HTTP protocols.
+
+Disadvantages of Statelessness
+Following are the disadvantages of statelessness in RESTful Web Services −
+
+Web services need to get extra information in each request and then interpret 
+to get the client's state in case the client interactions are to be taken care 
+of.
